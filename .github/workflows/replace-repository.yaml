@@ -8,7 +8,7 @@ jobs:
   replace:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@index
+    - uses: actions/checkout@v3
     - name: Copy the index
       run: |
         find ./bitnami/ -type f -name "index.yaml" | while read fname; do
