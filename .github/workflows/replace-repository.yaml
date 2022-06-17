@@ -16,14 +16,14 @@ jobs:
           foldername=`basename "$dirname"`
           filename=`basename "$fname"`
           newname=`echo "$dirname" | sed -e "s/ /_/g"`
-          cp "${dirname}/$filename" "./bitnami/index_tf.yaml"
+          cp "${dirname}/$filename" "./docs/bitnami/index.yaml"
         done
     - name: Find and Replace
       uses: jacobtomlinson/gha-find-replace@v2
       with:
         find: "charts.bitnami.com/bitnami"
         replace: "bitnami.techfreak.ch/bitnami"
-        include: "**index_tf.yaml"
+        include: "docs/bitnami/index.yaml"
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
