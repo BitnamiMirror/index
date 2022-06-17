@@ -21,8 +21,8 @@ jobs:
     - name: Find and Replace
       uses: jacobtomlinson/gha-find-replace@v2
       with:
-        find: "charts.bitnami.com/bitnami"
-        replace: "bitnami.techfreak.ch/bitnami"
+        find: "repository: https://charts.bitnami.com/bitnami"
+        replace: "repository: https://bitnami.techfreak.ch/bitnami"
         include: "docs/bitnami/index.yaml"
     - name: Commit files
       run: |
