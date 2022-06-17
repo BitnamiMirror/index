@@ -1,9 +1,9 @@
-name: replace_repository
+name: replace-repository
 on:
   push:
     branches: [ index ]
     paths: 'bitnami/index.yaml'
-
+  workflow_dispatch:
 jobs:
   replace:
     runs-on: ubuntu-latest
