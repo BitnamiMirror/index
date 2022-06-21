@@ -25,6 +25,15 @@ async function handleRequest(request) {
     })
     
     console.log(res2)
+
+    const res3 = await octokit.request('POST /repos/BitnamiMirror/index/merge-upstream', {
+        owner: 'bitnami',
+        repo: 'charts',
+        branch: 'archive-full-index'
+    })
+
+    console.log(res3)
+
     return new Response(`{ "ok": true }`, {
         headers: { "content-type": "application/json" },
     });
