@@ -1,0 +1,6 @@
+name = "bitnamimirrorsync"
+main = "./worker.js"
+account_id = "5142daa28862d4601c39cd95009509da"
+workers_dev = true
+route = "https://bitnami.techfreak.ch/sync"
+compatibility_date = "2021-11-12"

@@ -1,0 +1,16 @@
+version: "1"
+rules:                      # Array of rules
+  - base: archive-full-index            # Required. Target branch
+    upstream: randradas:archive-full-index    # Required. Must be in the same fork network.
+    mergeMethod: hardreset  # Optional, one of [none, merge, squash, rebase, hardreset], Default: none.
+    mergeUnstable: false    # Optional, merge pull request even when the mergeable_state is not clean. Default: false
+  - base: index
+    upstream: bitnami:index
+    mergeMethod: hardreset
+    mergeUnstable: false
+  - base: master
+    upstream: bitnami:master
+    mergeMethod: hardreset
+    mergeUnstable: false
+label: ":arrow_heading_down: pull"  # Optional
+conflictLabel: "merge-conflict"     # Optional, on merge conflict assign a custom label, Default: merge-conflict
